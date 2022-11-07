@@ -1,0 +1,254 @@
+/*Header bg*/
+.header{
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+}
+
+/* Gerais */
+
+body{
+  font-family: 'Vollkorn', Georgia, Serif;
+  margin: 0;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+h1,h2,h3,p,blockquote{
+  margin: 0px;
+}
+
+ul{
+  list-style: none;
+}
+
+ul,li{
+  margin: 0px;
+  padding: 0px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+p{
+  color: rgba(0, 0, 0, .7);
+}
+.line1{
+  line-height: 1.7;
+}
+/* Grid Principal */
+
+.grid-principal{
+  display: grid;
+  grid-template: "header header header"
+                 "sidebar content anuncio"
+                 "footer footer footer";
+  grid-template-columns: minmax(150px,1fr) 3fr 300px;
+}
+
+/* Header */
+
+.header{
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 30px;
+}
+
+.header > a{
+  max-width: 200px;
+}
+
+.header > a img{
+  max-width: 100%;
+  width: 100%;
+}
+
+.nav-primaria .nav-list{
+  display: flex;
+  gap: 20px;
+}
+
+.nav-primaria .nav-list .nav-item a{
+  font-size: 1.125rem;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  border-radius: 4px;
+}
+
+.nav-primaria .nav-list .nav-item a:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Sidenav */
+
+.side-nav{
+  grid-area: sidebar;
+  background: #fafbfc;
+ }
+
+.side-nav .nav-list{
+  display: grid;
+  gap: 20px;
+  margin: 30px;
+}
+
+.side-nav .nav-list .nav-item a{
+  min-height: 60px;
+  max-width: 100px;
+  display: block;
+  background-color: white;
+  box-shadow: 5px 5px 15px 0px rgb(44 44 44 / 15%);
+  border-radius: 4px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.side-nav .nav-list .nav-item a:hover{
+  background-color:#b07dfb;
+}
+
+/* Conteudo Principal */
+.conteudo-principal{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+.titulo-principal{
+  color:#b07dfb;
+}
+
+.titulo-principal h1{
+ font-size: 3.75rem;
+}
+
+.titulo-principal p{
+  font-size: .87rem;
+  color:#b07dfb;
+ }
+
+ .outras-info-container{
+  display: flex;
+  gap: 20px;
+ 
+ }
+ .outras-info-container div{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 15px 0px rgb(44 44 44 / 15%);
+  border-radius: 5px;
+  overflow: hidden;
+  align-self: start;
+}
+
+.outras-info-container div span:first-child{
+  font-size: 2.6rem;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  color: rgba(248, 248, 248, 0.3);
+}
+
+.outras-info-container div span:last-child{
+ text-align: center;
+ padding: 6px;
+ color: #8844ee;
+}
+.conteudo-principal > p,.informacoes-extra p{
+  font-size: 1.18rem;
+}
+.conteudo-principal > p:first-of-type{
+  grid-column: 1/-1;
+  line-height: 1.5;
+}
+
+.conteudo-principal > p:nth-of-type(2){
+  color:#b07dfb;
+  font-size: .87rem;
+  max-width: 30ch;
+  line-height: 1.5;
+}
+
+#wolf1{
+  grid-row: span 2;
+}
+
+#wolf2{
+  align-self: end;
+}
+
+.citacao{
+  grid-column: 1/-1;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  border-radius: 6px;
+}
+.citacao p{
+  font-size: 1.4rem;
+  color: white;
+  padding: 40px 20px;
+  max-width: 40ch;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.lista-propriedades{
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  padding: 40px 30px;
+  color: white;
+  font-size: 1.13rem;
+  font-weight: 100;
+  border-radius: 6px;
+}
+
+.list-propriedades-item{
+  padding: 12px;
+}
+
+.list-propriedades-item + .list-propriedades-item{
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.informacoes-extra p.line1:first-child{
+  margin-bottom: 20px;
+}
+
+#wolf3{
+  grid-column: 1/span 2;
+  
+}
+
+/* Anuncio */
+
+.anuncios{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background: #fafbfc;
+}
+
+/* Footer */
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  font-size: 1.2rem;
+  
+  padding: 32px;
+}
+
+.footer p{
+  color: white;
+}
