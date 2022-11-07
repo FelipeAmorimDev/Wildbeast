@@ -1,0 +1,36 @@
+/* Header */
+
+.header{
+  grid-area: header;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 30px;
+}
+
+.header > a{
+  max-width: 200px;
+}
+
+.header > a img{
+  max-width: 100%;
+  width: 100%;
+}
+
+.nav-primaria .nav-list{
+  display: flex;
+  gap: 20px;
+}
+
+.nav-primaria .nav-list .nav-item a{
+  font-size: 1.125rem;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  border-radius: 4px;
+}
+
+.nav-primaria .nav-list .nav-item a:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
