@@ -12,9 +12,8 @@
 }
 
 .side-nav .nav-list .nav-item a{
-  min-height: 60px;
+  min-width: 60px;
   max-width: 100px;
-  display: block;
   background-color: white;
   box-shadow: 5px 5px 15px 0px rgb(44 44 44 / 15%);
   border-radius: 4px;
@@ -24,4 +23,20 @@
 
 .side-nav .nav-list .nav-item a:hover{
   background-color:#b07dfb;
+}
+
+
+@media (max-width:800px){
+ .side-nav{
+    overflow-y: auto;
+  }
+
+  .side-nav .nav-list{
+    display: flex;
+  }
+
+  .side-nav .nav-list .nav-item{
+    flex: 1 0 100px;
+  }
+
 }

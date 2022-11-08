@@ -7,3 +7,18 @@
   padding: 30px;
   background: #fafbfc;
 }
+
+@media (max-width:1200px){
+  .anuncios{
+    flex-direction:row;
+    grid-column: 2/-1;
+  }
+}
+
+@media (max-width:800px){
+  .anuncios{
+    flex-direction:row;
+    grid-column: 1/-1;
+    
+  }
+}

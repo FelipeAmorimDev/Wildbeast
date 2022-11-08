@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  grid-area: content;
 }
 
 
@@ -65,6 +66,7 @@
 
 #wolf1{
   grid-row: span 2;
+  align-self: end;
 }
 
 #wolf2{
@@ -93,6 +95,7 @@
   font-size: 1.13rem;
   font-weight: 100;
   border-radius: 6px;
+  align-self: start;
 }
 
 .list-propriedades-item{
@@ -103,6 +106,7 @@
   border-top: 2px solid rgba(255, 255, 255, 0.4);
 }
 
+
 .informacoes-extra p.line1:first-child{
   margin-bottom: 20px;
 }
@@ -110,4 +114,29 @@
 #wolf3{
   grid-column: 1/span 2;
   
+}
+
+@media (max-width:900px){
+  .informacoes-extra p.line1{
+    line-height: 1.4;
+  }
+}
+
+@media (max-width:800px){
+  .conteudo-principal{
+    grid-template-columns: 1fr;
+    
+  }
+  
+  #wolf3{
+    grid-column: 1;
+    
+  }
+}
+
+@media (max-width:600px){
+  .header{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
